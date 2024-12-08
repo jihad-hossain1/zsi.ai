@@ -1,5 +1,7 @@
-import Counter from '@/components/counter'
+'use client'
+
 import React from 'react'
+
 
 const HomePage = () => {
   return (
@@ -7,7 +9,7 @@ const HomePage = () => {
       <h4>
         HomePage
       </h4>
-      <Counter />
+
     </div>
   )
 }

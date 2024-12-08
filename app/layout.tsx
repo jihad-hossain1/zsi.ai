@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import StoreProvider from "./StoreProvider";
+import Header from "@/components/shared/header/header";
+import Footer from "@/components/shared/footer/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,9 +32,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StoreProvider>
-          <main>
+          <Header />
+          <main className="min-h-screen">
             {children}
           </main>
+          <Footer />
         </StoreProvider>
       </body>
     </html>

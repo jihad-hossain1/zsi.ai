@@ -1,12 +1,25 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './slices/counterSlices'
+import authReducer from './slices/authSlices'
 
+
+// Rehydrate from localStorage
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const rehydratedState = (): any => {
+  if (typeof window !== "undefined") {
+      const savedState = localStorage.getItem("auth");
+      return savedState ? JSON.parse(savedState) : undefined;
+  }
+  return undefined;
+};
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-        counter: counterReducer
-    }
+        auth: authReducer
+    },
+    preloadedState: {
+      auth: rehydratedState(),
+  },
   })
 }
 
