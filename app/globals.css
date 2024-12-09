@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
  
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.taviraj-medium {
+  font-family: "Taviraj", serif;
+  font-weight: 500;
+  font-style: normal;
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import QuickPrice from './_comp/quickPrice/quickPrice'
 
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
         HomePage
       </h4>
 
+      <QuickPrice />
     </div>
   )
 }
