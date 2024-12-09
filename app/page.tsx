@@ -1,18 +1,16 @@
-'use client'
-
 import React from 'react'
 import QuickPrice from './_comp/quickPrice/quickPrice'
+import SatisfiedClient from './_comp/satisfyClient/satisfiedClient'
+import Question from './_comp/questions/question'
 
 
 const HomePage = () => {
   return (
-    <div>
-      <h4>
-        HomePage
-      </h4>
-
+    <main>
       <QuickPrice />
-    </div>
+      <SatisfiedClient />
+      <Question />
+    </main>
   )
 }
 

@@ -9,8 +9,44 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.taviraj {
+  font-family: "Taviraj", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .taviraj-medium {
   font-family: "Taviraj", serif;
   font-weight: 500;
+  font-style: normal;
+}
+
+.taviraj-bold {
+  font-family: "Taviraj", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.epilogue {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.epilogue-medium {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
