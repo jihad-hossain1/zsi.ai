@@ -4,6 +4,7 @@ import StoreProvider from "./StoreProvider";
 import Header from "@/components/shared/header/header";
 import Footer from "@/components/shared/footer/footer";
 import localFont from "next/font/local";
+import FloatChat from "@/components/floatChat/floatChat";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,13 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <StoreProvider>
           <Header />
           <main className="min-h-screen">
             {children}
           </main>
+          <FloatChat />
           <Footer />
         </StoreProvider>
       </body>

@@ -16,13 +16,13 @@ const Auth = () => {
     return (
         <div>
             {auth?.token ? (
-                <button onClick={handleLogout} className='border p-2 hover:bg-gray-50 bg-white hover:text-gray-700 duration-500 transition-all ease-in-out rounded'>
+                <button onClick={handleLogout} className='border p-2 hover:bg-gray-50 bg-zinc-800 md:bg-white hover:text-gray-700 duration-500 transition-all ease-in-out rounded'>
                     Logout
                 </button>
             ) : (
                 <a
                     href={"/login"}
-                    className='border p-2 hover:bg-gray-50 bg-white hover:text-gray-700 duration-500 transition-all ease-in-out rounded'
+                    className='border p-2 hover:bg-gray-50 bg-gray-800 md:bg-white hover:text-gray-700 duration-500 transition-all ease-in-out rounded'
                 >
                     Account Login
                 </a>

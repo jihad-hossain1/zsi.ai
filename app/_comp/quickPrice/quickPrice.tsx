@@ -33,8 +33,8 @@ const QuickPrice = () => {
 
     ]
   return (
-    <div className='container mx-auto md:p-0 p-4'>
-        <h4 className={`text-3xl font-semibold text-center taviraj-medium`}>Quick Price Check</h4>
+    <div className='container mx-auto md:p-0 p-4 mt-10'>
+        <h4 className={`text-3xl md:text-4xl font-semibold text-center taviraj-medium`}>Quick Price Check</h4>
 
         <div className='flex flex-col gap-4 md:flex-row md:items-center md:justify-center mt-10 md:mt-12'>
             {priceList.map((item, index) => (

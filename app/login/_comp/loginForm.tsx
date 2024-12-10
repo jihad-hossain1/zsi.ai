@@ -71,7 +71,7 @@ const LoginForm = () => {
 
             setLoading(true);
             const response = await createLogin({ ...formData });
-            console.log("🚀 ~ handleSubmit ~ response:", response)
+            // console.log("🚀 ~ handleSubmit ~ response:", response)
             setLoading(false);
 
             if (response?.isError == true) {
@@ -85,7 +85,7 @@ const LoginForm = () => {
             }
         } catch (error) {
             setLoading(false);
-            console.log(error);
+            console.error(error);
         }
     };
 

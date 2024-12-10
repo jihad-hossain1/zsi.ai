@@ -16,7 +16,7 @@ const Header = () => {
 
                 <nav className='flex gap-10'>
                     <div className='text-xl font-bold'>ZSI.AI</div>
-                    <ul className='flex gap-4 relative'>
+                    <ul className='flex gap-4 md:text-sm xl:text-lg md:gap-2 lg:gap-3 relative'>
                         {navlist.map((item, index) => (
                             <li key={index} className='relative group'>
                                 {item.sub ? (
@@ -27,7 +27,7 @@ const Header = () => {
                                         >
                                             {item.name} {item.sub && "▾"}
                                         </Link>
-                                        <ul className='absolute left-0 top-full hidden group-hover:block bg-[#f7a60f] shadow-lg p-3 rounded-lg transition-all duration-300 ease-in-out'>
+                                        <ul className='absolute left-0 z-10 top-full hidden group-hover:block bg-[#f7a60f] shadow-lg p-3 rounded-lg transition-all duration-300 ease-in-out'>
                                             {item.submenu.map(
                                                 (submenu, subIndex) => (
                                                     <li key={subIndex}>
@@ -55,7 +55,7 @@ const Header = () => {
                     </ul>
                 </nav>
 
-                <div className='flex items-center gap-3'>
+                <div className='flex items-center gap-3  md:text-sm xl:text-lg text-nowrap'>
                     <a
                         href='tel:1-833-711-4606'
                         className='flex items-center gap-1'
@@ -63,7 +63,7 @@ const Header = () => {
                         {" "}
                         <TelephonSvg className='h-4 w-4' /> 1-833-711-4606
                     </a>
-                    <div>
+                    <div >
                         <Link
                             href={"#"}
                             className='border p-2 hover:bg-white hover:text-gray-700 duration-500 transition-all ease-in-out rounded'
@@ -120,7 +120,7 @@ const ResponsiveHeader = () => {
                 className={`${isOpen
                         ? "transform translate-x-0"
                         : "transform translate-x-full"
-                    } fixed top-0 right-0 w-8/12 h-full bg-gray-100 shadow-lg transition-transform duration-300 ease-in-out md:hidden z-50`}
+                    } fixed top-0 right-0 w-8/12 h-full bg-gray-800 text-white shadow-lg transition-transform duration-300 ease-in-out md:hidden z-50`}
             >
                 <div className=''>
                     <ul className='flex flex-col items-start px-4 py-8 space-y-4 relative'>
@@ -161,23 +161,24 @@ const ResponsiveHeader = () => {
                         ))}
                     </ul>
 
-                    <div className='flex flex-col gap-3 px-4'>
+                    <div className='flex flex-col gap-3 px-4 '>
                     <a
                         href='tel:1-833-711-4606'
                         className='flex items-center gap-1'
                     >
-                        {" "}
-                        <TelephonSvg className='h-4 w-4' /> 1-833-711-4606
+                        <TelephonSvg className='h-4 w-4 ' fill="white" /> 1-833-711-4606
                     </a>
-                    <div>
+                    <div className="mt-3">
                         <Link
                             href={"#"}
-                            className='border p-2 hover:bg-white hover:text-gray-700 duration-500 transition-all ease-in-out rounded'
+                            className='border p-2 hover:bg-zinc-800 hover:text-gray-700 duration-500 transition-all ease-in-out rounded'
                         >
                             Book Now
                         </Link>
                     </div>
+                    <div className="mt-3">
                     <Auth />
+                    </div>
                 </div>
                 </div>
             </div>
